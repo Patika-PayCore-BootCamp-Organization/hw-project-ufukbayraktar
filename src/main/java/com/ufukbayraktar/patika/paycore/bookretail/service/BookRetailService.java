@@ -1,13 +1,13 @@
-package com.patika.paycore.FinalProject;
+package com.ufukbayraktar.patika.paycore.bookretail.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FinalProjectApplication {
+public class BookRetailService {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FinalProjectApplication.class, args);
+		SpringApplication.run(BookRetailService.class, args);
 	}
 
 }
