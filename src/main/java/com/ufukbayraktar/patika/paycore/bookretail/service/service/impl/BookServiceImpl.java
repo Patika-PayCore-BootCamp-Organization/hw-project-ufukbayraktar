@@ -5,14 +5,15 @@ import com.ufukbayraktar.patika.paycore.bookretail.service.model.request.BookCre
 import com.ufukbayraktar.patika.paycore.bookretail.service.model.response.BookCreateResponse;
 import com.ufukbayraktar.patika.paycore.bookretail.service.repository.BookRepository;
 import com.ufukbayraktar.patika.paycore.bookretail.service.service.BookService;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
-@RequiredArgsConstructor
-public class BookServiceImpl implements BookService {
+import java.util.Optional;
 
-    private final BookRepository bookRepository;
+@Service
+public class BookServiceImpl implements BookService {
+    @Autowired
+    private BookRepository bookRepository;
 
     @Override
     public BookCreateResponse createBook(BookCreateRequest request) {
@@ -36,5 +37,10 @@ public class BookServiceImpl implements BookService {
             System.err.println(e.getMessage());
             return response;
         }
+    }
+
+    @Override
+    public Optional<Book> getBook(Long id) {
+        return bookRepository.findById(id);
     }
 }
