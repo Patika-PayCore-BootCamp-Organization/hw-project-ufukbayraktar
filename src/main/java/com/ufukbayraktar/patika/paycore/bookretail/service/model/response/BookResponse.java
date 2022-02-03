@@ -7,7 +7,7 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookCreateResponse {
+public class BookResponse {
     private String message;
     private boolean isError;
 }

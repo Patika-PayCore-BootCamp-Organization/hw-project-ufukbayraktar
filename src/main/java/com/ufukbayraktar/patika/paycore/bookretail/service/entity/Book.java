@@ -1,5 +1,6 @@
-package com.ufukbayraktar.patika.paycore.bookretail.service.model;
+package com.ufukbayraktar.patika.paycore.bookretail.service.entity;
 
+import com.ufukbayraktar.patika.paycore.bookretail.service.model.dto.BookDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,4 +37,16 @@ public class Book {
 
     @NotNull(message = "Stock can not be null.")
     private Long remainingStock;
+
+    public static BookDTO toDTO(Book book){
+        BookDTO dto = new BookDTO();
+        dto.setName(book.getName());
+        dto.setDescription(book.getDescription());
+        dto.setPrice(book.getPrice());
+        dto.setWriter(book.getWriter());
+        dto.setRemainingStock(book.getRemainingStock());
+        return dto;
+    }
 }
+
+

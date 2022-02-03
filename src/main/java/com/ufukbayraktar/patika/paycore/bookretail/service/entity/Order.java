@@ -1,4 +1,4 @@
-package com.ufukbayraktar.patika.paycore.bookretail.service.model;
+package com.ufukbayraktar.patika.paycore.bookretail.service.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
